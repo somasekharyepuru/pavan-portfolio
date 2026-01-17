@@ -40,20 +40,24 @@ export default function Skills() {
           ))}
         </div>
 
-        {/* Summary */}
+        {/* Analytics */}
         <div className="mt-16 pt-12 border-t border-slate-800">
-          <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-sky-400 mb-1">9+</div>
-              <div className="text-slate-500 text-sm">Years</div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div className="text-center p-4">
+              <div className="text-4xl font-bold text-sky-400 mb-1">9+</div>
+              <div className="text-slate-500 text-sm">Years Experience</div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-sky-400 mb-1">50+</div>
-              <div className="text-slate-500 text-sm">Projects</div>
+            <div className="text-center p-4">
+              <div className="text-4xl font-bold text-sky-400 mb-1">50+</div>
+              <div className="text-slate-500 text-sm">Projects Delivered</div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-sky-400 mb-1">Full</div>
-              <div className="text-slate-500 text-sm">Stack</div>
+            <div className="text-center p-4">
+              <div className="text-4xl font-bold text-sky-400 mb-1">3</div>
+              <div className="text-slate-500 text-sm">Companies</div>
+            </div>
+            <div className="text-center p-4">
+              <div className="text-4xl font-bold text-sky-400 mb-1">15+</div>
+              <div className="text-slate-500 text-sm">Technologies</div>
             </div>
           </div>
         </div>
