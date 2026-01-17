@@ -23,7 +23,8 @@ export default function Home() {
           <p>© {new Date().getFullYear()} Pavan Karumuri</p>
           <div className="flex items-center gap-6">
             <a href="mailto:1andonlypa1@gmail.com" className="hover:text-white transition-colors">Email</a>
-            <a href="https://pavan1.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Website</a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">LinkedIn</a>
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">GitHub</a>
           </div>
         </div>
       </footer>

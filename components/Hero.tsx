@@ -61,9 +61,6 @@ export default function Hero() {
             <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:text-sky-400 transition-colors">
               GitHub
             </a>
-            <a href="https://pavan1.com" target="_blank" rel="noopener noreferrer" className="hover:text-sky-400 transition-colors">
-              Website
-            </a>
           </div>
         </div>
       </div>
