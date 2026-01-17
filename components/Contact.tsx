@@ -31,46 +31,42 @@ export default function Contact() {
 
   return (
     <section id="contact" className="py-24 relative overflow-hidden">
-      {/* Background accents */}
-      <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-indigo-500/20 rounded-full blur-3xl"></div>
-      <div className="absolute top-0 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl"></div>
+      {/* Subtle background */}
+      <div className="absolute inset-0 bg-slate-900/50"></div>
 
       <div className="max-w-6xl mx-auto px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left - CTA */}
           <div>
-            <span className="text-emerald-400 text-sm font-medium tracking-wider uppercase">Let's Connect</span>
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mt-2 mb-6">
-              Have a project in mind?
-            </h2>
+            <span className="text-sky-400 text-sm font-medium tracking-wider uppercase">Contact</span>
+            <h2 className="text-4xl font-bold text-white mt-2 mb-6">Let's Connect</h2>
             <p className="text-lg text-slate-400 mb-8 leading-relaxed">
-              I'm always open to discussing new opportunities, creative ideas, or collaborations.
-              Let's build something amazing together.
+              Have a project in mind or want to discuss opportunities? I'd love to hear from you.
             </p>
 
             {/* Contact cards */}
             <div className="space-y-4 mb-8">
-              <a href="mailto:1andonlypa1@gmail.com" className="flex items-center gap-4 p-4 bg-slate-900/50 border border-slate-800 rounded-xl hover:border-indigo-500/30 transition-colors group">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-500 flex items-center justify-center">
-                  <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <a href="mailto:1andonlypa1@gmail.com" className="flex items-center gap-4 p-4 bg-slate-900/60 border border-slate-800 rounded-xl hover:border-slate-700 transition-colors group">
+                <div className="w-12 h-12 rounded-lg bg-slate-800 flex items-center justify-center">
+                  <svg className="w-5 h-5 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
                 </div>
                 <div>
                   <div className="text-slate-400 text-sm">Email</div>
-                  <div className="text-white font-medium group-hover:text-indigo-400 transition-colors">1andonlypa1@gmail.com</div>
+                  <div className="text-white font-medium group-hover:text-sky-400 transition-colors">1andonlypa1@gmail.com</div>
                 </div>
               </a>
 
-              <a href="tel:+918328045299" className="flex items-center gap-4 p-4 bg-slate-900/50 border border-slate-800 rounded-xl hover:border-purple-500/30 transition-colors group">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center">
-                  <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <a href="tel:+918328045299" className="flex items-center gap-4 p-4 bg-slate-900/60 border border-slate-800 rounded-xl hover:border-slate-700 transition-colors group">
+                <div className="w-12 h-12 rounded-lg bg-slate-800 flex items-center justify-center">
+                  <svg className="w-5 h-5 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
                 </div>
                 <div>
                   <div className="text-slate-400 text-sm">Phone</div>
-                  <div className="text-white font-medium group-hover:text-purple-400 transition-colors">+91-8328045299</div>
+                  <div className="text-white font-medium group-hover:text-sky-400 transition-colors">+91-8328045299</div>
                 </div>
               </a>
             </div>
@@ -88,7 +84,7 @@ export default function Contact() {
           </div>
 
           {/* Right - Form */}
-          <div className="p-8 bg-slate-900/80 backdrop-blur-sm border border-slate-800 rounded-3xl">
+          <div className="p-8 bg-slate-900/80 backdrop-blur-sm border border-slate-800 rounded-xl">
             <h3 className="text-xl font-bold text-white mb-6">Send a Message</h3>
 
             <form onSubmit={handleSubmit} className="space-y-5">
@@ -99,7 +95,7 @@ export default function Contact() {
                   required
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500 transition-colors"
+                  className="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-sky-500 transition-colors"
                   placeholder="Your name"
                 />
               </div>
@@ -111,7 +107,7 @@ export default function Contact() {
                   required
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500 transition-colors"
+                  className="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-sky-500 transition-colors"
                   placeholder="you@example.com"
                 />
               </div>
@@ -123,19 +119,19 @@ export default function Contact() {
                   rows={4}
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500 transition-colors resize-none"
+                  className="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-sky-500 transition-colors resize-none"
                   placeholder="Tell me about your project..."
                 />
               </div>
 
               {submitStatus === "success" && (
-                <div className="p-4 bg-emerald-500/10 border border-emerald-500/30 rounded-xl text-emerald-400 text-sm">
+                <div className="p-4 bg-emerald-500/10 border border-emerald-500/30 rounded-lg text-emerald-400 text-sm">
                   ✓ Message sent! I'll get back to you soon.
                 </div>
               )}
 
               {submitStatus === "error" && (
-                <div className="p-4 bg-red-500/10 border border-red-500/30 rounded-xl text-red-400 text-sm">
+                <div className="p-4 bg-red-500/10 border border-red-500/30 rounded-lg text-red-400 text-sm">
                   Something went wrong. Please email me directly.
                 </div>
               )}
@@ -143,7 +139,7 @@ export default function Contact() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full py-4 bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-semibold rounded-xl hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full py-4 bg-sky-600 text-white font-semibold rounded-lg hover:bg-sky-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? "Sending..." : "Send Message"}
               </button>

@@ -27,10 +27,10 @@ const education = [
 
 export default function Education() {
   return (
-    <section id="education" className="py-24 bg-slate-900/50">
+    <section id="education" className="py-24 bg-slate-900/30">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
-          <span className="text-pink-400 text-sm font-medium tracking-wider uppercase">Background</span>
+          <span className="text-sky-400 text-sm font-medium tracking-wider uppercase">Background</span>
           <h2 className="text-4xl font-bold text-white mt-2">Education</h2>
         </div>
 
@@ -42,19 +42,10 @@ export default function Education() {
               className="min-w-[280px] lg:min-w-0 snap-center relative group"
             >
               {/* Card */}
-              <div className="h-full p-6 bg-slate-900 border border-slate-800 rounded-2xl hover:border-pink-500/30 transition-all relative overflow-hidden">
-                {/* Top accent */}
-                <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${index === 0 ? 'from-indigo-500 to-purple-500' :
-                    index === 1 ? 'from-purple-500 to-pink-500' :
-                      'from-pink-500 to-rose-500'
-                  }`}></div>
-
+              <div className="h-full p-6 bg-slate-900/60 border border-slate-800 rounded-xl hover:border-slate-700 transition-all">
                 {/* Year badge */}
                 <div className="inline-flex items-center gap-2 mb-4">
-                  <span className={`px-3 py-1 text-xs font-bold rounded-full ${index === 0 ? 'bg-indigo-500/20 text-indigo-300' :
-                      index === 1 ? 'bg-purple-500/20 text-purple-300' :
-                        'bg-pink-500/20 text-pink-300'
-                    }`}>
+                  <span className="px-3 py-1 text-xs font-bold rounded-lg bg-slate-800 text-sky-400">
                     {edu.year}
                   </span>
                 </div>
@@ -81,10 +72,7 @@ export default function Education() {
                 <div className="mt-6 pt-4 border-t border-slate-800">
                   <div className="flex items-center justify-between">
                     <span className="text-slate-500 text-sm">Score</span>
-                    <span className={`text-lg font-bold ${index === 0 ? 'text-indigo-400' :
-                        index === 1 ? 'text-purple-400' :
-                          'text-pink-400'
-                      }`}>{edu.score}</span>
+                    <span className="text-lg font-bold text-sky-400">{edu.score}</span>
                   </div>
                 </div>
               </div>

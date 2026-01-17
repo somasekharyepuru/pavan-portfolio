@@ -27,7 +27,7 @@ export default function Navigation() {
     >
       <div className="max-w-6xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <a href="#hero" className="text-xl font-bold bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
+          <a href="#hero" className="text-xl font-bold text-white hover:text-sky-400 transition-colors">
             PK
           </a>
 
@@ -43,9 +43,9 @@ export default function Navigation() {
             ))}
             <a
               href="#contact"
-              className="px-4 py-2 bg-gradient-to-r from-indigo-500 to-purple-500 text-white text-sm font-medium rounded-full hover:opacity-90 transition-opacity"
+              className="px-4 py-2 bg-sky-600 text-white text-sm font-medium rounded-lg hover:bg-sky-700 transition-colors"
             >
-              Hire Me
+              Contact
             </a>
           </div>
         </div>
