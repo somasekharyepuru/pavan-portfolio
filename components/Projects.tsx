@@ -1,103 +1,72 @@
 const projects = [
   {
     title: "Hotel PMS & Aggregator",
-    category: "Hospitality",
-    description: "Comprehensive property management with multi-channel integration",
-    tech: ["Golang", "PostgreSQL"],
-    featured: true,
+    company: "Fountane Makerspace",
+    description: "Property management system serving 500+ properties with multi-channel integration",
+    tech: ["Golang", "PostgreSQL", "Microservices"],
   },
   {
     title: "Staynow Booking Platform",
-    category: "E-Commerce",
-    description: "Multi-tenant hotel booking with Cloudbeds & Sabre APIs",
-    tech: ["NestJS", "React"],
-    featured: true,
+    company: "Fountane Makerspace",
+    description: "Multi-tenant hotel booking platform with Cloudbeds & Sabre API integration",
+    tech: ["NestJS", "React", "PostgreSQL"],
   },
   {
     title: "ComplyIQ Tax Platform",
-    category: "FinTech",
-    description: "US tax filing with dynamic form builder",
-    tech: ["Express.js", "React"],
-    featured: false,
-  },
-  {
-    title: "Courier Dashboard",
-    category: "Logistics",
-    description: "Real-time tracking with interactive analytics",
-    tech: ["React", "GraphQL"],
-    featured: false,
-  },
-  {
-    title: "Practitioner Platform",
-    category: "Healthcare",
-    description: "Community tools with Azure integration",
-    tech: ["React", "Node.js"],
-    featured: false,
-  },
-  {
-    title: "QA Collaboration Tool",
-    category: "SaaS",
-    description: "Real-time QA with live subscriptions",
-    tech: ["Svelte", "Node.js"],
-    featured: false,
+    company: "Fountane Makerspace",
+    description: "US tax filing system with dynamic form builder and automated workflows",
+    tech: ["Express.js", "React", "PostgreSQL"],
   },
 ];
 
-export default function Projects() {
-  const featuredProjects = projects.filter(p => p.featured);
-  const otherProjects = projects.filter(p => !p.featured);
+const otherProjects = [
+  "Courier Dashboard (React, GraphQL)",
+  "Practitioner Platform (React, Node.js, Azure)",
+  "QA Collaboration Tool (Svelte, Node.js)",
+  "Real-time Notifications (Socket.io, Redis)",
+  "Vehicle Tracking System (Node.js, MongoDB)",
+];
 
+export default function Projects() {
   return (
     <section id="projects" className="py-24 bg-slate-900/30">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
           <span className="text-sky-400 text-sm font-medium tracking-wider uppercase">Portfolio</span>
-          <h2 className="text-4xl font-bold text-white mt-2">Featured Projects</h2>
+          <h2 className="text-4xl font-bold text-white mt-2">Featured Work</h2>
         </div>
 
-        {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {/* Featured - Large cards */}
-          {featuredProjects.map((project) => (
-            <div
-              key={project.title}
-              className="md:col-span-2 lg:col-span-1 relative overflow-hidden rounded-xl p-6 bg-slate-900/60 border border-slate-800 hover:border-slate-700 transition-all group"
-            >
-              <span className="inline-block px-3 py-1 bg-slate-800 text-sky-400 text-xs font-medium rounded-lg mb-4">
-                {project.category}
-              </span>
-              <h3 className="text-xl font-bold text-white mb-2 group-hover:text-sky-400 transition-colors">
-                {project.title}
-              </h3>
-              <p className="text-slate-400 mb-6">{project.description}</p>
-              <div className="flex flex-wrap gap-2">
-                {project.tech.map((tech) => (
-                  <span key={tech} className="px-3 py-1 bg-slate-800 text-slate-400 text-sm rounded-lg">
-                    {tech}
-                  </span>
-                ))}
+        {/* Featured projects - clean list */}
+        <div className="mb-16">
+          {projects.map((project, index) => (
+            <div key={index} className="py-8 border-b border-slate-800 last:border-0">
+              <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-3">
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-1">{project.title}</h3>
+                  <p className="text-sky-400 text-sm">{project.company}</p>
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  {project.tech.map((t) => (
+                    <span key={t} className="text-xs text-slate-400">{t}</span>
+                  ))}
+                </div>
               </div>
+              <p className="text-slate-400 text-sm leading-relaxed">{project.description}</p>
             </div>
           ))}
+        </div>
 
-          {/* Other projects */}
-          {otherProjects.map((project) => (
-            <div
-              key={project.title}
-              className="relative overflow-hidden rounded-xl p-6 bg-slate-900/60 border border-slate-800 hover:border-slate-700 transition-all group"
-            >
-              <span className="text-xs text-slate-500 font-medium">{project.category}</span>
-              <h3 className="text-lg font-bold text-white mb-2 mt-1 group-hover:text-sky-400 transition-colors">{project.title}</h3>
-              <p className="text-slate-500 text-sm mb-4">{project.description}</p>
-              <div className="flex flex-wrap gap-2">
-                {project.tech.map((tech) => (
-                  <span key={tech} className="px-2 py-1 bg-slate-800 text-slate-400 text-xs rounded">
-                    {tech}
-                  </span>
-                ))}
+        {/* Other projects - simple list */}
+        <div className="border-t border-slate-800 pt-12">
+          <h3 className="text-sm font-medium text-slate-500 mb-6">Other Notable Projects</h3>
+          <div className="grid md:grid-cols-2 gap-3">
+            {otherProjects.map((project, index) => (
+              <div key={index} className="flex items-center gap-2 text-sm text-slate-400">
+                <span className="text-sky-400">▹</span>
+                <span>{project}</span>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>
