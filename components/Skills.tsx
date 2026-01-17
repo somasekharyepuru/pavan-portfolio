@@ -22,15 +22,15 @@ export default function Skills() {
           <h2 className="text-4xl font-bold text-white mt-2">Skills & Technologies</h2>
         </div>
 
-        <div className="max-w-4xl mx-auto space-y-12">
+        <div className="max-w-4xl mx-auto space-y-8">
           {Object.entries(skills).map(([category, items]) => (
-            <div key={category}>
+            <div key={category} className="p-6 bg-slate-900/40 border border-slate-800 rounded-lg">
               <h3 className="text-lg font-semibold text-white mb-4">{category}</h3>
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-wrap gap-2">
                 {items.map((skill) => (
                   <span
                     key={skill}
-                    className="text-slate-400 hover:text-sky-400 transition-colors cursor-default"
+                    className="px-3 py-1 bg-slate-800 text-slate-300 text-sm rounded hover:text-sky-400 transition-colors cursor-default"
                   >
                     {skill}
                   </span>
@@ -41,10 +41,21 @@ export default function Skills() {
         </div>
 
         {/* Summary */}
-        <div className="mt-20 pt-12 border-t border-slate-800 text-center">
-          <p className="text-slate-500 text-sm">
-            9+ years of experience • 50+ projects delivered • Full-stack development
-          </p>
+        <div className="mt-16 pt-12 border-t border-slate-800">
+          <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto">
+            <div className="text-center">
+              <div className="text-3xl font-bold text-sky-400 mb-1">9+</div>
+              <div className="text-slate-500 text-sm">Years</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-sky-400 mb-1">50+</div>
+              <div className="text-slate-500 text-sm">Projects</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-sky-400 mb-1">Full</div>
+              <div className="text-slate-500 text-sm">Stack</div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

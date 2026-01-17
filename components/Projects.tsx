@@ -17,10 +17,15 @@ const projects = [
     description: "US tax filing system with dynamic form builder and automated workflows",
     tech: ["Express.js", "React", "PostgreSQL"],
   },
+  {
+    title: "Courier Dashboard",
+    company: "Fountane Makerspace",
+    description: "Logistics platform with real-time tracking and interactive analytics",
+    tech: ["React", "GraphQL", "Chakra UI"],
+  },
 ];
 
 const otherProjects = [
-  "Courier Dashboard (React, GraphQL)",
   "Practitioner Platform (React, Node.js, Azure)",
   "QA Collaboration Tool (Svelte, Node.js)",
   "Real-time Notifications (Socket.io, Redis)",
@@ -36,10 +41,10 @@ export default function Projects() {
           <h2 className="text-4xl font-bold text-white mt-2">Featured Work</h2>
         </div>
 
-        {/* Featured projects - clean list */}
-        <div className="mb-16">
+        {/* Featured projects - structured list */}
+        <div className="mb-16 space-y-6">
           {projects.map((project, index) => (
-            <div key={index} className="py-8 border-b border-slate-800 last:border-0">
+            <div key={index} className="p-6 bg-slate-900/40 border border-slate-800 rounded-lg hover:border-slate-700 transition-all">
               <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-3">
                 <div>
                   <h3 className="text-xl font-bold text-white mb-1">{project.title}</h3>
@@ -47,7 +52,7 @@ export default function Projects() {
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {project.tech.map((t) => (
-                    <span key={t} className="text-xs text-slate-400">{t}</span>
+                    <span key={t} className="px-2 py-1 bg-slate-800 text-slate-300 text-xs rounded">{t}</span>
                   ))}
                 </div>
               </div>

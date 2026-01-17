@@ -28,17 +28,19 @@ export default function Education() {
           <h2 className="text-4xl font-bold text-white mt-2">Education</h2>
         </div>
 
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-3xl mx-auto space-y-4">
           {education.map((edu, index) => (
-            <div key={index} className="py-6 border-b border-slate-800 last:border-0">
-              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
+            <div key={index} className="p-6 bg-slate-900/40 border border-slate-800 rounded-lg">
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                 <div>
                   <h3 className="text-lg font-semibold text-white">
                     {edu.degree} in {edu.field}
                   </h3>
                   <p className="text-slate-400 text-sm mt-1">{edu.institution}</p>
                 </div>
-                <span className="text-sky-400 text-sm font-medium">{edu.year}</span>
+                <span className="px-3 py-1 bg-slate-800 text-sky-400 text-sm font-medium rounded whitespace-nowrap">
+                  {edu.year}
+                </span>
               </div>
             </div>
           ))}
